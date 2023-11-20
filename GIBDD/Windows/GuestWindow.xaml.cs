@@ -24,11 +24,11 @@ namespace GIBDD.Windows
             InitializeComponent();
             Title = "Окно гостя";
         }
-        private void Button_Menu(object sender, RoutedEventArgs e)
+        private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Hide();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
         }
     }
 }

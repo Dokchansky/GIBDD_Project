@@ -28,7 +28,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25">
-            <Button Content="В меню" Click="Button_Menu" Height="30" Width="120"/>
+            <Button Content="Выход" Click="Button_Exit" Height="30" Width="120"/>
         </StackPanel>
     </Grid>
 </Window>

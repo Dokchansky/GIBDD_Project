@@ -22,7 +22,7 @@ namespace GIBDD.Windows
         public AdminWindow()
         {
             InitializeComponent();
-            Title = "Добавление пользователя";
+            Title = "Окно администратора";
         }
 
         private void Button_Personal(object sender, RoutedEventArgs e)
