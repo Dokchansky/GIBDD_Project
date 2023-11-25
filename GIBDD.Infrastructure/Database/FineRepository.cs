@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GIBDD.Infrastructure.Database
 {
-    internal class FineRepository
+    public class FineRepository
     {
         public List<FineViewModel> GetList()
         {

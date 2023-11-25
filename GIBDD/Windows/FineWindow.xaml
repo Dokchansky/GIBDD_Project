@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Height="450" Width="800">
-    <Grid x:Name="FineGrid">
+    <Grid>
         <Label Content="{Binding Title}" Height="450" Width="800"/>
         <StackPanel Height="20" Width="250" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20">
             <TextBlock Text="Федеральный орган ГИБДД" Height="20" Width="250" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="16"/>
@@ -20,7 +20,7 @@
             <Label Content="Гос.номер:" Margin="0,5,0,0"/>
             <ComboBox x:Name="state_number" Margin="0,2,1,20" Background="#FFC9DEF5"/>
         </DockPanel>
-        <DataGrid Margin="216,151,150,59" Background="#FFC9DEF5" AutoGenerateColumns="False" >
+        <DataGrid Margin="216,151,150,59" Background="#FFC9DEF5" AutoGenerateColumns="False" x:Name="FineGrid">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Fine.Name}" CanUserReorder="False"/>
                 <DataGridTextColumn Header="Стоимость" Binding="{Binding Fine.Value}" CanUserReorder="False"/>

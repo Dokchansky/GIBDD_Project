@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GIBDD.Infrastructure.Database;
 
 
 namespace GIBDD.Windows
@@ -20,13 +21,13 @@ namespace GIBDD.Windows
     /// </summary>
     public partial class FineWindow : Window
     {
-        //private FineRepository _repository;
+        private FineRepository _repository;
         public FineWindow()
         {
             InitializeComponent();
             Title = "Список штрафов";
-            //_repository = new FineRepository();
-            //FineGrid.ItemsSource = _repository.GetList();
+            _repository = new FineRepository();
+            FineGrid.ItemsSource = _repository.GetList();
 
         }
         private void Button_Menu(object sender, RoutedEventArgs e)

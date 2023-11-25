@@ -15,5 +15,13 @@ namespace GIBDD.Infrastructure.ViewModels
         public long TypeID { get; set; }
         public long TransportID { get; set; }
 
+        public string ID1 { get; set; }
+        public string Name1 { get; set; }
+        public string Value1 { get; set; }
+        public string Status1 { get; set; }
+        public string TypeID1 { get; set; }
+        public string TransportID1 { get; set; }
+
+
     }
 }

@@ -15,6 +15,10 @@ namespace GIBDD.Infrastructure.Mappers
             {
                 ID = entity.ID,
                 Name = entity.Name,
+                Status = entity.Status,
+                Value = entity.Value,
+                TypeID = entity.TypeID,
+                TransportID = entity.TransportID,
 
             };
             return viewModel;
@@ -25,5 +29,10 @@ namespace GIBDD.Infrastructure.Mappers
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
+        internal static object Map(FineViewModel viewModel)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
