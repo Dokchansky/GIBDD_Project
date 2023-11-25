@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace GIBDD.Infrastructure.Database
 {
-    internal class FineRepository
+    public partial class FineRepository
     {
         public List<FineViewModel> GetList()
         {
-
             using (var context = new Context())
             {
                 var items = context.Fines.ToList();
@@ -25,6 +24,18 @@ namespace GIBDD.Infrastructure.Database
             {
                 var item = context.Fines.FirstOrDefault(x => x.ID == id);
                 return FineMapper.Map(item);
+            }
+        }
+        public FineViewModel Add(FineViewModel viewModel)
+        {
+            using (var context = new Context())
+            {
+                var entity = FineMapper.Map(viewModel);
+
+                context.Fines.Add(entity);
+                context.SaveChanges();
+
+                return FineMapper.Map(entity);
             }
         }
     }

@@ -19,12 +19,12 @@
         <StackPanel HorizontalAlignment="Center" Margin="-10,50,0,334" Height="30">
             <TextBlock Text="Информация о филиалах ГИБДД" FontSize="14" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed"/>
         </StackPanel>
-        <DataGrid Margin="100" Background="#FFC9DEF5">
+        <DataGrid Margin="100,100,63,79" Background="#FFC9DEF5" x:Name="GuestGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название"/>
-                <DataGridTextColumn Header="Адрес"/>
-                <DataGridTextColumn Header="Начало работы"/>
-                <DataGridTextColumn Header="Конец работы"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" CanUserReorder="False" />
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" CanUserReorder="False"/>
+                <DataGridTextColumn Header="Начало работы" Binding="{Binding StartWork}" CanUserReorder="False" />
+                <DataGridTextColumn Header="Конец работы" Binding="{Binding StopWork}" CanUserReorder="False"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25">

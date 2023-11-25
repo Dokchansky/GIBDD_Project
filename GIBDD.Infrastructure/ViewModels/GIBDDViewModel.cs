@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace GIBDD.Infrastructure.ViewModels
 {
-    internal class GIBDDViewModel
+    public class GIBDDViewModel
     {
+        public long ID { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string StartWork { get; set; }
+        public string StopWork { get; set; }
+
+
     }
 }

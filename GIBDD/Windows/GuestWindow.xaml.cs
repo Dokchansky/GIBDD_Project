@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GIBDD.Infrastructure.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,14 @@ namespace GIBDD.Windows
     /// </summary>
     public partial class GuestWindow : Window
     {
+        private GIBDDRepository _repository;
         public GuestWindow()
         {
             InitializeComponent();
             Title = "Окно гостя";
+            _repository = new GIBDDRepository();
+            GuestGrid.ItemsSource = _repository.GetList();
+
         }
         private void Button_Exit(object sender, RoutedEventArgs e)
         {
