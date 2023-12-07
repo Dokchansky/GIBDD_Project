@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GIBDD.Infrastructure;
 using GIBDD.Infrastructure.Database;
 using GIBDD.Infrastructure.ViewModels;
 
@@ -24,15 +25,19 @@ namespace GIBDD.Windows
     {
         private FineRepository _repository;
         private TransportRepository _transportRepository;
+        private TransportViewModel _viewTransportModel;
+        
         public FineWindow()
         {
             InitializeComponent();
             Title = "Список штрафов";
             _repository = new FineRepository();
-            FineGrid.ItemsSource = _repository.GetList();
+            //FineGrid.ItemsSource = _repository.GetList();
             _transportRepository = new TransportRepository();
             state_number.ItemsSource = _transportRepository.GetList();
-
+            
+            
+            
 
         }
         private void Button_Menu(object sender, RoutedEventArgs e)
@@ -44,9 +49,23 @@ namespace GIBDD.Windows
 
         private void state_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //TransportRepository chosenumber = state_number.SelectedItem as TransportRepository;
-            //FineGrid.ItemsSource = chosenumber.GetList();
-            
+            _viewTransportModel = state_number.SelectedItem as TransportViewModel;
+            UpdateGrid();
+        }
+        private void UpdateGrid()
+        {
+            if (_viewTransportModel != null)
+            {
+                var selectedNumber = _repository.GetByFineId(_viewTransportModel.ID);
+                FineGrid.ItemsSource = selectedNumber;
+               
+                             
+                
+            }
+            else
+            {
+                FineGrid.ItemsSource = null;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

@@ -18,7 +18,7 @@ namespace GIBDD.Infrastructure.Mappers
                 Status = entity.Status,
                 Value = entity.Value,
                 TransportID = entity.TransportID,
-                TransportName = entity.Transport.ID,
+                
                 
                 
 

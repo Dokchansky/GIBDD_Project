@@ -18,11 +18,11 @@ namespace GIBDD.Infrastructure.Database
                 return FineMapper.Map(items);
             }
         }
-        public FineViewModel GetById(long id)
+        public List<FineViewModel> GetByFineId(long id)
         {
             using (var context = new Context())
             {
-                var item = context.Fines.FirstOrDefault(x => x.ID == id);
+                var item = context.Fines.Where(x => x.TransportID == id).ToList();
                 return FineMapper.Map(item);
             }
         }

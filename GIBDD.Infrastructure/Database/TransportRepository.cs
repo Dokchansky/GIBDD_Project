@@ -18,5 +18,20 @@ namespace GIBDD.Infrastructure.Database
                 return TransportMapper.Map(items);
             }
         }
+
+        public object Where(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
+        public List<TransportViewModel> GetByTransportId(long id)
+        {
+            using (var context = new Context())
+            {
+                var item = context.Transports.Where(x => x.ID == id).ToList();
+                return TransportMapper.Map(item);
+            }
+        }
+
+
     }
 }
