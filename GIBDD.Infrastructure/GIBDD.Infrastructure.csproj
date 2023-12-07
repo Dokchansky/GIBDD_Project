@@ -65,19 +65,48 @@
     <Compile Include="BrandEntity..cs" />
     <Compile Include="CarСategoryEntity.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Database\BrandRepository.cs" />
+    <Compile Include="Database\CarCategoryRepository.cs" />
+    <Compile Include="Database\FineRepository.cs" />
+    <Compile Include="Database\GIBDDRepository.cs" />
+    <Compile Include="Database\IBaseRepository.cs" />
+    <Compile Include="Database\ModelRepository.cs" />
+    <Compile Include="Database\RoleRepository.cs" />
+    <Compile Include="Database\TransportRepository.cs" />
+    <Compile Include="Database\TypeFineRepository.cs" />
+    <Compile Include="Database\UserRepository.cs" />
     <Compile Include="FineEntity.cs" />
     <Compile Include="GIBDDEntity.cs" />
+    <Compile Include="Mappers\BrandMapper.cs" />
+    <Compile Include="Mappers\CarCategoryMapper.cs" />
+    <Compile Include="Mappers\FineMapper.cs" />
+    <Compile Include="Mappers\GIBDDMapper.cs" />
+    <Compile Include="Mappers\ModelMapper.cs" />
+    <Compile Include="Mappers\RoleMapper.cs" />
+    <Compile Include="Mappers\TransportMapper.cs" />
+    <Compile Include="Mappers\TypeFineMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="ModelEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleEntity.cs" />
     <Compile Include="TransportEntity.cs" />
     <Compile Include="TypeFineEntity.cs" />
     <Compile Include="UserEntity.cs" />
+    <Compile Include="ViewModels\BrandViewModel.cs" />
+    <Compile Include="ViewModels\CarCategoryViewModel.cs" />
+    <Compile Include="ViewModels\FineViewModel.cs" />
+    <Compile Include="ViewModels\GIBDDViewModel.cs" />
+    <Compile Include="ViewModels\ModelViewModel.cs" />
+    <Compile Include="ViewModels\RoleViewModel.cs" />
+    <Compile Include="ViewModels\TransportViewModel.cs" />
+    <Compile Include="ViewModels\TypeFineViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
