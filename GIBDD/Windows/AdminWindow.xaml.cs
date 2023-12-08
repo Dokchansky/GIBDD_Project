@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GIBDD.Infrastructure;
+using GIBDD.Infrastructure.Consts;
+using GIBDD.Infrastructure.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +22,14 @@ namespace GIBDD.Windows
     /// </summary>
     public partial class AdminWindow : Window
     {
+      
         public AdminWindow()
         {
             InitializeComponent();
             Title = "Окно администратора";
+            userNameTextBox.Text = Application.Current.Resources[UserInfoConsts.UserName].ToString();
+            roleTextBox.Text = Application.Current.Resources[UserInfoConsts.RoleName].ToString();
+
         }
 
         private void Button_Personal(object sender, RoutedEventArgs e)
@@ -55,5 +62,7 @@ namespace GIBDD.Windows
             UsersWindow usersWindow = new UsersWindow();
             usersWindow.Show();
         }
+
+      
     }
 }

@@ -13,9 +13,9 @@
         <DockPanel Margin="195,68,205,75">
             <StackPanel Width="130" Height="390">
                 <Label Content="Логин" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed"/>
-                <TextBox x:Name="login"/>
+                <TextBox x:Name="loginBox"/>
                 <Label Content="Пароль" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed"/>
-                <PasswordBox x:Name="password"/>
+                <PasswordBox x:Name="passwordBox"/>
                 <Button Content="Войти" Click="Button_Login" Margin="5,10" Cursor="Hand"/>
                 <Button Content="Гость" Click="Button_Guest" Margin="5,10"/>
                 <Button Content="Выйти" Click="Button_Exit" Margin="5,10"/>

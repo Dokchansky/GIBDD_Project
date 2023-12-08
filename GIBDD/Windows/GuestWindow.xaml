@@ -16,15 +16,23 @@
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="86" Width="87" >
             <Image Source="gibdd.png"/>
         </StackPanel>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,92,0,0" Orientation="Horizontal">
+            <TextBlock Text="Пользователь:" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="16" Foreground="#FF007ACC"/>
+            <TextBox x:Name="userNameTextBox" IsReadOnly="True" Width="Auto" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="8"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,125,0,0" Orientation="Horizontal">
+            <TextBlock Text="Роль:" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Foreground="#FF007ACC" />
+            <TextBox x:Name="roleTextBox" IsReadOnly="True" Width="Auto" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="8"/>
+        </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="-10,50,0,334" Height="30">
             <TextBlock Text="Информация о филиалах ГИБДД" FontSize="14" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed"/>
         </StackPanel>
-        <DataGrid Margin="100" Background="#FFC9DEF5">
+        <DataGrid Margin="180,137,10,25" Background="#FFC9DEF5" x:Name="GuestGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название"/>
-                <DataGridTextColumn Header="Адрес"/>
-                <DataGridTextColumn Header="Начало работы"/>
-                <DataGridTextColumn Header="Конец работы"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" CanUserReorder="False" />
+                <DataGridTextColumn Header="Адрес" Binding="{Binding Address}" CanUserReorder="False"/>
+                <DataGridTextColumn Header="Начало работы" Binding="{Binding StartWork}" CanUserReorder="False" />
+                <DataGridTextColumn Header="Конец работы" Binding="{Binding StopWork}" CanUserReorder="False"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25">

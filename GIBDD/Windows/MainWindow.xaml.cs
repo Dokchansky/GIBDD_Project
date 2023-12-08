@@ -1,4 +1,5 @@
-﻿using GIBDD.Windows;
+﻿using GIBDD.Infrastructure.Consts;
+using GIBDD.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace GIBDD
         {
             InitializeComponent();
             Title = "Окно пользователя";
+            userNameTextBox.Text = Application.Current.Resources[UserInfoConsts.UserName].ToString();
+            roleTextBox.Text = Application.Current.Resources[UserInfoConsts.RoleName].ToString();
         }
 
         private void Button_Personal(object sender, RoutedEventArgs e)

@@ -183,6 +183,12 @@
   <ItemGroup>
     <Resource Include="Windows\gibdd.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GIBDD.Infrastructure\GIBDD.Infrastructure.csproj">
+      <Project>{879BC585-9B97-4714-997B-A70E66A86D04}</Project>
+      <Name>GIBDD.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
