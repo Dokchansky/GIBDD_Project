@@ -1,4 +1,5 @@
-﻿using GIBDD.Infrastructure.Database;
+﻿using GIBDD.Infrastructure.Consts;
+using GIBDD.Infrastructure.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,8 @@ namespace GIBDD.Windows
             Title = "Окно гостя";
             _repository = new GIBDDRepository();
             GuestGrid.ItemsSource = _repository.GetList();
-
+            userNameTextBox.Text = Application.Current.Resources[UserInfoConsts.UserName].ToString();
+            roleTextBox.Text = Application.Current.Resources[UserInfoConsts.RoleName].ToString();
         }
         private void Button_Exit(object sender, RoutedEventArgs e)
         {

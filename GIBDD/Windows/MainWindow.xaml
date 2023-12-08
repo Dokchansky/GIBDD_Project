@@ -27,11 +27,11 @@
         </StackPanel>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,95,0,0" Orientation="Horizontal">
             <TextBlock Text="Пользователь:" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="16" Foreground="#FF007ACC"/>
-            <TextBox x:Name="userNameTextBox" IsReadOnly="True" Text="" Width="120" />
+            <TextBox x:Name="userNameTextBox" IsReadOnly="True" Text="" Width="132" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Condensed" FontSize="16" Height="30" />
         </StackPanel>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,125,0,0" Orientation="Horizontal">
             <TextBlock Text="Роль:" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Foreground="#FF007ACC" />
-            <TextBox x:Name="roleTextBox" IsReadOnly="True" Width="100"/>
+            <TextBox x:Name="roleTextBox" IsReadOnly="True" Width="153" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="16"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="86" Width="87" >
             <Image Source="gibdd.png"/>

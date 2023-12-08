@@ -18,6 +18,7 @@ using GIBDD.Infrastructure;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.Remoting.Contexts;
 using System.Data;
+using GIBDD.Infrastructure.Consts;
 
 namespace GIBDD.Windows
 {
@@ -34,6 +35,7 @@ namespace GIBDD.Windows
             Title = "Окно авторизации";
             _userRepository = new UserRepository();
             _userViewModel = new UserViewModel();
+
         }
 
 
@@ -63,9 +65,22 @@ namespace GIBDD.Windows
             
             using (Infrastructure.Context context = new Infrastructure.Context())
             {
-                var user = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password);
+                var user = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleID ==2);
+                var user1 = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleID==1);
                 if (user != null)
                 {
+                    Application.Current.Resources[UserInfoConsts.RoleID] = 2;
+                    Application.Current.Resources[UserInfoConsts.RoleName] = " Пользователь";
+                    Application.Current.Resources[UserInfoConsts.UserName] = $" {login}";
+                    Hide();
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show(); ;
+                }
+                else if (user1 != null)
+                {
+                    Application.Current.Resources[UserInfoConsts.RoleID] = 1;
+                    Application.Current.Resources[UserInfoConsts.RoleName] = " Администратор";
+                    Application.Current.Resources[UserInfoConsts.UserName] = $" {login}";
                     Hide();
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show(); ;
@@ -83,6 +98,9 @@ namespace GIBDD.Windows
 
         private void Button_Guest(object sender, RoutedEventArgs e)
         {
+            Application.Current.Resources[UserInfoConsts.RoleID] = 3;
+            Application.Current.Resources[UserInfoConsts.RoleName] = " Гость";
+            Application.Current.Resources[UserInfoConsts.UserName] = " Гость";
             Hide();
             GuestWindow guestWindow = new GuestWindow();
             guestWindow.Show();

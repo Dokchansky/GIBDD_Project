@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="BrandEntity..cs" />
     <Compile Include="CarСategoryEntity.cs" />
+    <Compile Include="Consts\UserInfoConsts.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Database\BrandRepository.cs" />
     <Compile Include="Database\CarCategoryRepository.cs" />
