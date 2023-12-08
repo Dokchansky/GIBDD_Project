@@ -18,7 +18,7 @@
         </StackPanel>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,92,0,0" Orientation="Horizontal">
             <TextBlock Text="Пользователь:" FontFamily="Gill Sans Ultra Bold Condensed" FontSize="16" Foreground="#FF007ACC"/>
-            <TextBox x:Name="userNameTextBox" IsReadOnly="True" Text="" Width="120" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Condensed" FontSize="16"/>
+            <TextBox x:Name="userNameTextBox" IsReadOnly="True" Text="" Width="Auto" Foreground="#FF007ACC" FontFamily="Gill Sans Ultra Condensed" FontSize="16"/>
         </StackPanel>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,125,0,0" Orientation="Horizontal">
             <TextBlock Text="Роль:" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Foreground="#FF007ACC" />
